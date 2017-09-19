@@ -1,0 +1,219 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18/09/2017, 14:04:39
+    Author     : Adriano Back
+*/
+
+body{
+    margin: 0px;
+    font-family: arial,sans-serif;
+    font-size: 8pt;
+    background-color: rgb(28,103,82);
+}
+header{
+    background-color: rgb(5,31,28);
+    margin: 0px;
+    padding: 10px;
+}
+header p{
+    margin: 0px;
+    text-align: center;
+    color: rgb(32,72,71);
+    font-size: 12pt;
+}
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+header nav ol{
+    padding: 0px;
+}
+header nav ol li {
+    list-style: none;
+}
+header nav ol li a{
+    display: block;
+    text-decoration: none;
+    padding: 7px;
+    border: 1px solid rgb(28,103,82);
+    border-radius: 4px;
+    color: rgb(28,103,82);
+    margin-bottom: 3px;
+}
+header nav ol li a:hover{
+    background-color: rgba(255,255,255,.4);
+}
+h1{
+    display: block;
+    font-size: 10pt;
+    text-align: center;
+    background-color: rgb(28,103,82);
+    color: rgb(0,187,122);
+    margin: 0px;
+    height: 50px;
+    padding: 10px 50px;
+    
+}
+article {
+    display: flex;
+    height: 180px;
+    max-width: 400px;
+    border:2px solid rgb(28,103,82);
+    background-color: rgba(255,255,255,.5);
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+}
+article.mais {
+    display: flex;
+    height: 290px;
+    border:2px solid rgb(28,103,82);
+    background-color: rgba(255,255,255,.5);
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    
+}
+article div{
+    height: 120px;
+    padding: 20px;
+    
+}
+article p{
+    font-size: 8pt;
+    display: block;
+    padding: 4px;
+    float: right;
+    margin: 2px 0px;
+    width: 50%; 
+    
+}
+article img{
+    display: block;
+    float:left;
+    width: 42%;
+    height: 86%;
+    border-radius: 20px;
+}
+article a{
+    text-decoration: none;
+    font-size: 10pt;
+    padding: 10px;
+}
+div.opt a {
+    position: relative;
+    display: inline-block;
+    top: -60px;
+}
+footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    margin: 0px;
+    height: 200px;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 400px;
+}
+footer p{
+     margin: 0px;
+     padding-top: 80px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    padding: 20px 10px;
+    align-items: center;
+}
+form input{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 25px;
+    border: none;
+    margin-bottom: 3px;
+    text-align:center;
+    border-radius: 4px;
+}
+form select{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 25px;
+    border: none;
+    margin-bottom: 3px;
+    text-align:center;
+    border-radius: 4px;
+}
+
+@media screen and (min-width : 760px){
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+    header div{
+        width: 900px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        margin:0px auto;
+    }
+    header p{
+       font-size: 16pt; 
+       margin-right: 100px;
+    }
+    header nav{
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+    header nav ol {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        width: 500px;
+        margin:0px auto;
+    }
+    header nav ol li{
+        
+        flex-direction: row;
+         align-items: center;
+        text-align: center;
+    }
+    header nav ol li a{
+        
+        flex-direction: row;
+         align-items: center;
+        text-align: center;
+        margin-right: 5px;
+        font-size: 10pt;
+    }
+    h1{
+        font-size: 15pt;
+    }
+    
+    article{
+        margin: 2px auto;
+    }
+    form{
+       margin: 6px auto;
+        width: 500px;
+        border-radius: 4px;
+    }
+}
+
