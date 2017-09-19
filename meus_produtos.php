@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+require_once 'user.php';
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -16,7 +18,7 @@ Author Adriano Back
         
         <?php
         require_once 'define.php';
-        require_once 'user.php';
+        
 
         $erro_index = 0;
         
@@ -46,7 +48,7 @@ Author Adriano Back
             }
             require_once 'footer.php';
         }else{
-            header('location:login.php');
+            echo'<p>Para acessar esta pagina você precisa se <a href="cadastro_usuario.php">cadastrar<a/> ou fazer <a href="login.php">login</a></p>';
         }
         ?>
     </body>

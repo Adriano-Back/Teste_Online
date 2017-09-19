@@ -1,3 +1,6 @@
+<?php
+require_once 'user.php';
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -13,8 +16,7 @@ and open the template in the editor.
     <body>
         <?php
         require_once 'define.php';
-        require_once 'user.php';
-        
+
         $error_cadp = 0;
         $info = 0;
         
@@ -125,7 +127,7 @@ and open the template in the editor.
                 }           
         require_once 'footer.php';
         }else{
-            header('location:login.php');
+            echo'<p>Para acessar esta pagina você precisa se <a href="cadastro_usuario.php">cadastrar<a/> ou fazer <a href="login.php">login</a></p>';
         }
         ?>
     </body>

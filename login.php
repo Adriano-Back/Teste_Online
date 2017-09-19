@@ -1,3 +1,6 @@
+<?php
+require_once 'user.php';
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -14,7 +17,7 @@ and open the template in the editor.
         <h1>Loja - Login</h1>
         <?php
         require_once 'define.php';//define senhas de database
-        require_once 'user.php';//inicia uma session
+        
         $error_login = 0;
             
             if(isset($_POST['entrar'])){
@@ -36,8 +39,7 @@ and open the template in the editor.
                             setcookie('user_id',$row['id'], time() + (60*60*2));
                             setcookie('user_name',$row['nome'], time() + (60*60*2));
                             
-                            $home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']). '/index.php';
-                            header('location:' . $home_url);
+                            
                         }else{
                             $error_login = 'Desculpe, não foi encontrado nenhum<br>usuario cadastrado ou a senha esta incorreta.';
                             //eliminando a sujeira e resetando o sistema de login
@@ -54,6 +56,7 @@ and open the template in the editor.
                     $error_login = 'Desculpe, você precisa informar um email';
                 }  
             }
+            if(!isset($_SESSION['user_id'])){
         ?>
     
         <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
@@ -69,6 +72,10 @@ and open the template in the editor.
         </form>
     
         <?php
+            }else{
+                echo '<p class="aviso">Olá, ' . $_COOKIE['user_name'].'</p>';
+                echo'<p class="aviso">Você está logado deseja ir a <a href="index.php">pagina principal</a>?</p>';
+            }
         require_once 'footer.php';
         ?>
     </body>
